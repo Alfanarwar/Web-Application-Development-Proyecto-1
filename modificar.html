@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Modificar</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    </head>
+    <body>
+        <script src="js/sidenav.js"></script>
+        <script src="js/modificar.js"></script>
+        
+        <nav class="w3-sidenav w3-white w3-animate-left" style="display: none" id="mySidenav">
+            <a href="javascript:void(0)" class="w3-closenav w3-large" onclick="close_sidenav()">Cerrar &times;</a>
+            <a href="./">Inicio</a>
+            <a href="registrar.html">Registrar</a>
+            <a href="modificar.html">Modificar</a>
+            <a href="eliminar.html">Eliminar</a>
+            <a href="listar.html">Listar</a>
+        </nav>
+        
+        <header class="w3-container w3-teal">
+            <span class="w3-opennav w3-xlarge" onclick="open_sidenav()">&#9776;</span>
+            <h1>Modificar</h1>
+        </header>
+        
+        <form class="w3-container">
+            <p>
+                <input type="radio" class="w3-radio" name="radio-que" checked="checked" onclick="onclick_radio_entidad()">
+                <label class="w3-validate">Entidad</label>
+            </p>
+            
+            <p>
+                <input class="w3-radio" type="radio" name="radio-que" onclick="onclick_radio_usuario()">
+                <label class="w3-validate">Usuario</label>
+            </p>
+        </form>
+        
+        <form id="form-entidad-nombre" class="w3-container">
+            <p>
+                <label>Nombre de la entidad</label>
+                <input id="nb_entidad" type="text" class="w3-input" onkeyup="loadEntidadesPorNombre(this.value)">
+            </p>
+        </form>
+        
+        <div id="div-select-entidad" class="w3-container">
+            <p>
+                <label>Entidad</label>
+                <select id="select-entidades" class="w3-select"></select>
+            </p>
+        </div>
+        
+        <form id="form-persona-nombre" class="w3-container" style="display: none">
+            <p>
+                <label>Nombre de la persona</label>
+                <input id="nb_persona" type="text" class="w3-input" onkeyup="loadPersonasPorNombre(this.value)">
+            </p>
+        </form>
+        
+        <div id="div-select-persona" class="w3-container" style="display: none">
+            <p>
+                <label>Persona</label>
+                <select id="select-personas" class="w3-select"></select>
+            </p>
+        </div>
+        
+        <form id="form-entidad" class="w3-container" action="ActualizarEntidad" method="POST">
+        </form>
+        
+        <form id="form-persona" class="w3-container" action="ActualizarPersona" method="POST" style="display: none">
+        </form>
+    </body>
+</html>

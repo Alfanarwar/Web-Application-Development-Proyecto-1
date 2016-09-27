@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Listar</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    </head>
+    <body>
+        <script src="js/sidenav.js"></script>
+        <script src=js/listar.js"></script>
+        
+        <nav class="w3-sidenav w3-white w3-animate-left" style="display: none" id="mySidenav">
+            <a href="javascript:void(0)" class="w3-closenav w3-large" onclick="close_sidenav()">Cerrar &times;</a>
+            <a href="./">Inicio</a>
+            <a href="registrar.html">Registrar</a>
+            <a href="modificar.html">Modificar</a>
+            <a href="eliminar.html">Eliminar</a>
+            <a href="listar.html">Listar</a>
+        </nav>
+        
+        <header class="w3-container w3-teal">
+            <span class="w3-opennav w3-xlarge" onclick="open_sidenav()">&#9776;</span>
+            <h1>Listar</h1>
+        </header>
+        
+        <form class="w3-container">
+            <input class="w3-radio" type="radio" name="radio-que" checked="checked">
+            <label class="w3-validate">Direccion</label>
+            
+            <input class="w3-radio" type="radio" name="radio-que">
+            <label class="w3-validate">Entidad</label>
+            
+            <input class="w3-radio" type="radio" name="radio-que">
+            <label class="w3-validate">Persona</label>
+            
+            <input class="w3-radio" type="radio" name="radio-que">
+            <label class="w3-validate">Usuario</label>
+        </form>
+        
+        <form class="w3-container">
+            <input class="w3-radio" type="radio" name="radio-direccion" value="todos" checked="checked">
+            <label class="w3-validate">Todos</label>
+            
+            <input class="w3-radio" type="radio" name="radio-direccion" value="por-persona">
+            <label class="w3-validate">Por persona</label>
+            
+            <input class="w3-radio" type="radio" name="radio-direccion" value="por-entidad">
+            <label class="w3-validate">Por entidad</label>
+        </form>
+        
+        <form class="w3-container" style="display: none">
+            <input class="w3-radio" type="radio" name="radio-entidad" value="todos" checked="checked">
+            <label class="w3-validate">Todos</label>
+            
+            <input class="w3-radio" type="radio" name="radio-entidad" value="por-entidad">
+            <label class="w3-validate">Por entidad</label>
+        </form>
+        
+        <form class="w3-container" style="display: none">
+            <input class="w3-radio" type="radio" name="radio-persona" value="todos" checked="checked">
+            <label class="w3-validate">Todos</label>
+            
+            <input class="w3-radio" type="radio" name="radio-persona" value="por-persona">
+            <label class="w3-validate">Por persona</label>
+        </form>
+        
+        <form class="w3-container" style="display: none">
+            <input class="w3-radio" type="radio" name="radio-usuario" value="todos" checked="checked">
+            <label class="w3-validate">Todos</label>
+            
+            <input class="w3-radio" type="radio" name="radio-usuario" value="por-usuario">
+            <label class="w3-validate">Por usuario</label>
+        </form>
+        

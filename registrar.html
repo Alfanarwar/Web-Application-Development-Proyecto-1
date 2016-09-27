@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registrar</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/w3.css">
+    </head>
+    <body onload="loadEntidades()">
+        <script src="js/sidenav.js"></script>
+        <script src="js/registrar.js"></script>
+        
+        <nav id="mySidenav" class="w3-sidenav w3-white w3-animate-left" style="display: none">
+            <a href="javascript:void(0)" class="w3-closenav w3-large" onclick="close_sidenav()">Cerrar &times;</a>
+            <a href="./">Inicio</a>
+            <a href="registrar.html">Registrar</a>
+            <a href="modificar.html">Modificar</a>
+            <a href="eliminar.html">Eliminar</a>
+            <a href="listar.html">Listar</a>
+        </nav>
+        
+        <header class="w3-container w3-teal">
+            <span class="w3-opennav w3-xlarge" onclick="open_sidenav()">&#9776;</span>
+            <h1>Registrar</h1>
+        </header>
+        
+        <form class="w3-container">
+            <p>
+                <input class="w3-radio" type="radio" name="radio-que" onclick="onclick_radio_entidad()" checked="checked">
+                <label class="w3-validate">Entidad</label>
+            </p>
+            
+            <p>
+                <input class="w3-radio" type="radio" name="radio-que" onclick="onclick_radio_usuario()">
+                <label class="w3-validate">Usuario</label>
+            </p>
+        </form>
+        
+        <div id="entidad-title" class="w3-container w3-blue">
+            <h2>Registrar entidad</h2>
+        </div>
+        
+        <form id="form-entidad" class="w3-container" action="RegistrarEntidad" method="POST" accept-charset="ISO-8859-1">
+            <p>
+                <label>Nombre</label>
+                <input class="w3-input" type="text" name="nb_entidad">
+            </p>
+            
+            <p>
+                <input class="w3-btn w3-blue" type="submit" value="Registrar">
+            </p>
+        </form>
+        
+        <div id="usuario-title" class="w3-container w3-blue" style="display: none">
+            <h2>Registrar usuario</h2>
+        </div>
+        
+        <form id="form-usuario" class="w3-container" method="POST" action="RegistrarUsuario" method="POST" style="display: none"  accept-charset="ISO-8859-1">
+            <p>
+                <label>Login</label>
+                <input class="w3-input" type="text" name="tx_login">
+            </p>
+            
+            <p>
+                <label>Password</label>
+                <input class="w3-input" type="password" name="tx_password">
+            </p>
+            
+            <p>
+                <label>Nombre</label>
+                <input class="w3-input" type="text" name="nb_persona">
+            </p>
+            
+            <p>
+                <label>Primer apellido</label>
+                <input class="w3-input" type="text" name="tx_primer_ap">
+            </p>
+            
+            <p>
+                <label>Segundo apellido</label>
+                <input class="w3-input" type="text" name="tx_segundo_ap">
+            </p>
+            
+            <p>
+                <label>Fecha de nacimiento</label>
+                <input class="w3-input" type="text" name="fh_nacimiento">
+            </p>
+            
+            <p>
+                <label>Entidad</label>
+                <select id="select-entidades" class="w3-select" name="select-entidad" form="form-usuario">
+                </select>
+            </p>
+            
+            <p>
+                <label>Calle</label>
+                <input class="w3-input" type="text" name="nb_calle">
+            </p>
+            
+            <p>
+                <label>Colonia</label>
+                <input class="w3-input" type="text" name="nb_colonia">
+            </p>
+            
+            <p>
+                <label>Ciudad</label>
+                <input class="w3-input" type="text" name="nb_ciudad">
+            </p>
+            
+            <p>
+                <label>Código postal</label>
+                <input class="w3-input" type="text" name="tx_cp">
+            </p>
+            
+            <p>
+                <input class="w3-btn w3-blue" type="submit" value="Registrar">
+            </p>
+        </form>
+    </body>
+</html>

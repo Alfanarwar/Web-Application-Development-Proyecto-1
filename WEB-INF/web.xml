@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+    <welcom-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcom-file-list>
+    
+    <servlet>
+        <servlet-name>RegistrarEntidad</servlet-name>
+        <servlet-class>proyecto1.services.RegistrarEntidad</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>RegistrarEntidad</servlet-name>
+        <url-pattern>/RegistrarEntidad</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>RegistrarUsuario</servlet-name>
+        <servlet-class>proyecto1.services.RegistrarUsuario</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>RegistrarUsuario</servlet-name>
+        <url-pattern>/RegistrarUsuario</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>GetEntidades</servlet-name>
+        <servlet-class>proyecto1.services.GetEntidades</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>GetEntidades</servlet-name>
+        <url-pattern>/GetEntidades</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>GetEntidadesPorNombre</servlet-name>
+        <servlet-class>proyecto1.services.GetEntidadesPorNombre</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>GetEntidadesPorNombre</servlet-name>
+        <url-pattern>/GetEntidadesPorNombre</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>GetEntidadPorId</servlet-name>
+        <servlet-class>proyecto1.services.GetEntidadPorId</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>GetEntidadPorId</servlet-name>
+        <url-pattern>/GetEntidadPorId</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ActualizarEntidad</servlet-name>
+        <servlet-class>proyecto1.services.ActualizarEntidad</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>ActualizarEntidad</servlet-name>
+        <url-pattern>/ActualizarEntidad</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>GetPersonasPorNombre</servlet-name>
+        <servlet-class>proyecto1.services.GetPersonasPorNombre</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>GetPersonasPorNombre</servlet-name>
+        <url-pattern>/GetPersonasPorNombre</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>GetPersonaPorId</servlet-name>
+        <servlet-class>proyecto1.services.GetPersonaPorId</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>GetPersonaPorId</servlet-name>
+        <url-pattern>/GetPersonaPorId</url-pattern>
+    </servlet-mapping>
+</web-app>
